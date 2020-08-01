@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Easybank landing page</title>
@@ -15,9 +15,9 @@
   </style>
 </head>
 <body>
-<nav>
-  <img src="images/logo.svg" alt="logo">
-  <ul>
+<!-- <nav> -->
+  <!-- <img src="images/logo.svg" alt="logo">
+  <ul id="myLinks">
   <li><a href="#">Home</a></li> 
   <li><a href="#">About</a></li> 
   <li><a href="#">Contact</a></li> 
@@ -26,8 +26,21 @@
 </ul>
 <button class="button button4">
   Request Invite
-</button>
+</button> -->
+<nav class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </nav>
+<!-- </nav> -->
 
 <section id="top">
   <div>
@@ -36,7 +49,7 @@
   Take your financial life online. Your Easybank account <br> will be a one-stop-shop 
   for spending, saving,<br> budgeting, investing, and much more.
 </p>
-<button>
+<button class="button button4">
   Request Invite
 </button>
 </div>
@@ -150,7 +163,7 @@
 </div>
 </section>
 <footer>
-  <div>
+  <div id="phone_logo">
       <img src="images/logo.svg" alt="logo">
        <div class="social">
           <a href=""><img src="icon-instagram.svg"  alt="s"> </a> 
@@ -160,7 +173,7 @@
        </div>
   </div>
  
-  <div>
+  <div id="phone">
     <a href="#"> <h6>About Us</h6></a> 
     <a href="#"> <h6>Contact</h6>  </a>
    <a href="#"> <h6>Blog</h6>   </a>
@@ -183,5 +196,14 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script>
+  function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}</script>
 </body>
 </html>
